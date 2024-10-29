@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Employee.MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_employee"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/olive"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="Home"
+                android:textColor="@android:color/white"
+                android:paddingStart="16dp"
+                android:textSize="16sp"
+                style="@style/Headline"/>
+
+
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Name"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                style="@style/Headline"/>
+
+            <TextView
+
+                android:id="@+id/tv_logout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Logout"
+                android:textColor="@color/red"
+                android:textSize="16sp"
+                style="@style/Headline"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_below="@id/toolbar_employee"
+        android:layout_centerInParent="true"
+        android:id="@+id/text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/find_workers"
+            android:layout_gravity="center"
+            android:textColor="@color/olive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find Workers"
+            style="@style/Headline"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/connect_skilled_workers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Connect with Skilled Workers"
+            style="@style/Body"
+            android:padding="8dp"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_below="@+id/text_1">
+
+        <SearchView
+            android:id="@+id/search_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:iconifiedByDefault="false"
+            android:background="@drawable/search_box"
+
+            android:queryHint="What are you looking for ..." />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginLeft="2dp"
+            android:id="@+id/search_button"
+            android:textColor="@color/white"
+            android:background="@drawable/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search" />
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_employee"
+        android:layout_below="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+
+</RelativeLayout>

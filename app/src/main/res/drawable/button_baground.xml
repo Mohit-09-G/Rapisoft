@@ -1,0 +1,13 @@
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/olive"/> <!-- Light grey background color -->
+
+    <!-- Optional border for the square button -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/olive"/> <!-- Slightly darker grey for the border -->
+
+
+    <corners android:radius="0dp"/>
+</shape>

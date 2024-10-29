@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Worker_Activity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_worker"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/olive"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Worker Dashboard"
+            style="@style/Headline"
+            android:textColor="@android:color/white"
+            android:layout_gravity="start|center_vertical"
+            android:paddingStart="16dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:background="@drawable/edit_text_box"
+            android:backgroundTint="@color/red"
+            android:paddingEnd="6dp"
+            android:text="Logout"
+            android:textColor="@color/white" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_worker"
+        android:layout_below="@+id/toolbar_worker"/>
+
+</RelativeLayout>

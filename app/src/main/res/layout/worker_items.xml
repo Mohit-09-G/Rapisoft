@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_margin="8dp"
+    android:elevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/worker_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/worker_1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:scaleType="centerCrop"
+           />
+
+        <TextView
+            android:id="@+id/worker_name"
+            android:layout_width="50dp"
+            android:layout_height="32dp"
+            android:text="Worker 1"
+            style="@style/Headline"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@id/worker_image" />
+
+        <LinearLayout
+            android:id="@+id/customer_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/worker_name"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp"
+            android:layout_toStartOf="@id/worker_image">
+
+            <!-- Category Text Row -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category: "
+                    style="@style/Subheading" />
+
+                <TextView
+                    android:id="@+id/category_worker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Worker Category"
+                    style="@style/Body"
+                    android:layout_marginEnd="16dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/customer_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email: "
+                    style="@style/Subheading" />
+
+                <TextView
+                    android:id="@+id/worker_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="example@email.com"
+                    style="@style/Body" />
+            </LinearLayout>
+
+            <!-- Phone Text Row -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone: "
+                    style="@style/Subheading" />
+
+                <TextView
+                    android:id="@+id/phone_worker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7018555555"
+                    style="@style/Body"
+                    android:layout_marginEnd="16dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/hire_button"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/customer_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hire"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/search_button"
+            android:text="Hire"
+            android:padding="8dp" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
